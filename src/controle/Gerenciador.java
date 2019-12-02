@@ -1,7 +1,6 @@
 package controle;
 
 import java.util.ArrayList;
-
 import modelo.Curso;
 import modelo.Instrutor;
 
@@ -31,7 +30,7 @@ public class Gerenciador {
 
 	public void buscarCursos(int id) {
 		if (verificarSeIdExiste(id) == false) {
-			System.out.println("Curso não encontrado!");
+			System.out.println("Curso nï¿½o encontrado!");
 		} else {
 			for (int i = 0; i < instrutores.size(); i++) {
 				if (instrutores.get(i).getCurso().getId() == id) {
@@ -40,10 +39,10 @@ public class Gerenciador {
 					System.out.println("*             Curso Encontrado              *");
 					System.out.println("*                                           *");
 					System.out.println("*********************************************");
-					System.out.println("Curso: " + instrutores.get(i).getCurso().getNome() + "\nId: "
-							+ instrutores.get(i).getCurso().getId() + "\nData de Início: "
-							+ instrutores.get(i).getCurso().getDatainicio() + "\nData de Término: "
-							+ instrutores.get(i).getCurso().getDatatermino());
+					System.out.println("Curso: " + instrutores.get(i).getCurso().getNome() + 
+					"\nId: "+ instrutores.get(i).getCurso().getId() +
+					 "\nData de Inï¿½cio: " + instrutores.get(i).getCurso().getDatainicio() +
+					  "\nData de Tï¿½rmino: " + instrutores.get(i).getCurso().getDatatermino());
 					break;
 				}
 			}
@@ -62,7 +61,7 @@ public class Gerenciador {
 				break;
 
 			} else {
-				System.out.println("Curso não encontrado, tente outro!");
+				System.out.println("Curso nï¿½o encontrado, tente outro!");
 			}
 		}
 	}
@@ -88,5 +87,4 @@ public class Gerenciador {
 			}
 		}
 	}
-
 }
