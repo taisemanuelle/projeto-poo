@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import modelo.Curso;
 import modelo.Instrutor;
 
-public class Gerenciador {
+public class Controlador {
 
 	private ArrayList<Instrutor> instrutores;
 
-	public Gerenciador() {
+	public Controlador() {
 
 		instrutores = new ArrayList<>();
 	}

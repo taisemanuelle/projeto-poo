@@ -6,17 +6,16 @@ public class Curso {
 	private String nome;
 	private String datainicio;
 	private String datatermino;
-	
+
 	public Curso() {
-		
+
 	}
-	
+
 	public Curso(String nome) {
 		super();
 		this.nome = nome;
-		
-	}
 
+	}
 
 	public Curso(int id, String nome, String datainicio, String datatermino) {
 		this.id = id;
@@ -25,28 +24,26 @@ public class Curso {
 		this.datatermino = datatermino;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
+
 	public String getDatainicio() {
 		return datainicio;
 	}
-	
+
 	public void setDatainicio(String datainicio) {
 		this.datainicio = datainicio;
 	}
-	
+
 	public String getDatatermino() {
 		return datatermino;
 	}
-	
+
 	public void setDatatermino(String datatermino) {
 		this.datatermino = datatermino;
 	}
@@ -60,8 +57,7 @@ public class Curso {
 	}
 
 	public void setInstrutor(Object setNome) {
-		
+
 	}
 
-	
 }

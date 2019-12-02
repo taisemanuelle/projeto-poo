@@ -1,6 +1,7 @@
 package modelo;
 
-public class Instrutor extends Pessoa{
+public class Instrutor extends Pessoa
+{
 
 	private String email;
     private Curso curso;
@@ -15,7 +16,7 @@ public class Instrutor extends Pessoa{
         this.curso = curso;
     }
 
-    //Sobrescrita do método getNome da classe Pessoa(superclasse ou classe mãe ou classe pai)
+    //Sobrescrita do mï¿½todo getNome da classe Pessoa(superclasse ou classe mï¿½e ou classe pai)
     public String getNome() {
         return "Nome do instrutor:" + super.getNome();
     }

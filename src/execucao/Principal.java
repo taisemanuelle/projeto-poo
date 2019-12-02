@@ -2,7 +2,7 @@ package execucao;
 
 import java.util.Scanner;
 
-import controle.Gerenciador;
+import controle.Controlador;
 import modelo.Curso;
 import modelo.Instrutor;
 
@@ -17,11 +17,12 @@ public class Principal {
 		 
 		Instrutor instrutor;
 		String nomeInstrutor, email;
-	    Gerenciador gerenciador = new Gerenciador();
+	    Controlador controlador = new Controlador();
       
         int opcao = 0;
         
-        do {
+		
+		do {
         	System.out.println("***********Bem vindo**************************");
         	System.out.println("*          Op��es                           *");
         	System.out.println("*    1 - Adicionar instrutor e curso        *");
@@ -59,14 +60,14 @@ public class Principal {
 
 				instrutor = new Instrutor(nomeInstrutor,email,curso);
 
-				gerenciador.adicionarInstrutor(instrutor);
+				controlador.adicionarInstrutor(instrutor);
 				break;
 
 			case 2:
 
 				teclado.nextLine();
 				System.out.println("Listar");
-				gerenciador.listarCursos();
+				controlador.listarCursos();
 				break;
 
 			case 3:
@@ -74,7 +75,7 @@ public class Principal {
 				System.out.println("Buscar Curso");
 				System.out.println("Informe id do curso: ");
 				id = teclado.nextInt();	
-				gerenciador.buscarCursos(id);
+				controlador.buscarCursos(id);
 				break;
 
 			case 4: 
@@ -85,7 +86,7 @@ public class Principal {
 				System.out.println("Informe a id do curso que deseja atualizar:");
 				id = teclado.nextInt();
 
-				if(gerenciador.verificarSeIdExiste(id) == false)
+				if(controlador.verificarSeIdExiste(id) == false)
 				 {
 					System.out.println("Curso n�o emcontrado");
 					break;
@@ -97,12 +98,12 @@ public class Principal {
 
 				System.out.println("Informe uma nova data de in�cio: ");
 				datainicio = teclado.nextLine();
-				//teclado.nextLine();
+				
 				
 				System.out.println("Informe uma nova data de t�rmino: ");
 				datatermino = teclado.nextLine();
 
-				gerenciador.atualizarCursos(id,nomeCurso,datainicio,datatermino);					
+				controlador.atualizarCursos(id,nomeCurso,datainicio,datatermino);					
 				break;				
 
 			case 5:
@@ -110,11 +111,11 @@ public class Principal {
 				teclado.nextLine();
 				System.out.println("Informe a id do curso que deseja remover: ");
 				id = teclado.nextInt();
-				if(gerenciador.verificarSeIdExiste(id) == false) {
+				if(controlador.verificarSeIdExiste(id) == false) {
 					System.out.println("Curso n�o encontrado");
 					break;
 				}
-				gerenciador.removerCurso(id);
+				controlador.removerCurso(id);
 				break;
 			default:
 				
